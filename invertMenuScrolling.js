@@ -21,7 +21,7 @@ app.registerExtension({
 		};
 		app.ui.settings.addSetting({
 			id,
-			name: "Invert Menu Scrolling",
+			name: "翻转菜单滚动",
 			type: "boolean",
 			defaultValue: false,
 			onChange(value) {
