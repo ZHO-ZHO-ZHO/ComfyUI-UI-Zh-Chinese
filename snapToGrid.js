@@ -8,7 +8,7 @@ app.registerExtension({
 		// Add setting to control grid size
 		app.ui.settings.addSetting({
 			id: "Comfy.SnapToGrid.GridSize",
-			name: "Grid Size",
+			name: "网格大小",
 			type: "slider",
 			attrs: {
 				min: 1,
