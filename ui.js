@@ -428,12 +428,12 @@ class ComfyList {
 					...items[section].map((item) => {
 						// Allow items to specify a custom remove action (e.g. for interrupt current prompt)
 						const removeAction = item.remove || {
-							name: "Delete",
+							name: "删除",
 							cb: () => api.deleteItem(this.#type, item.prompt[1]),
 						};
 						return $el("div", {textContent: item.prompt[0] + ": "}, [
 							$el("button", {
-								textContent: "Load",
+								textContent: "加载",
 								onclick: () => {
 									app.loadGraphData(item.prompt[3].extra_pnginfo.workflow);
 									if (item.outputs) {
@@ -454,13 +454,13 @@ class ComfyList {
 			]),
 			$el("div.comfy-list-actions", [
 				$el("button", {
-					textContent: "Clear " + this.#text,
+					textContent: "清除 " + this.#text,
 					onclick: async () => {
 						await api.clearItems(this.#type);
 						await this.load();
 					},
 				}),
-				$el("button", {textContent: "Refresh", onclick: () => this.load()}),
+				$el("button", {textContent: "刷新", onclick: () => this.load()}),
 			])
 		);
 	}
@@ -473,14 +473,14 @@ class ComfyList {
 
 	async show() {
 		this.element.style.display = "block";
-		this.button.textContent = "Close";
+		this.button.textContent = "关闭";
 
 		await this.load();
 	}
 
 	hide() {
 		this.element.style.display = "none";
-		this.button.textContent = "See " + this.#text;
+		this.button.textContent = "查看 " + this.#text;
 	}
 
 	toggle() {
@@ -625,7 +625,7 @@ export class ComfyUI {
 			$el("div.comfy-menu-btns", [
 				$el("button", {
 					id: "queue-front-button",
-					textContent: "队列前端",
+					textContent: "优先生成",
 					onclick: () => app.queuePrompt(-1, this.batchCount)
 				}),
 				$el("button", {
