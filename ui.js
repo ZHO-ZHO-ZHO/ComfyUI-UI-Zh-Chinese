@@ -714,7 +714,7 @@ export class ComfyUI {
 				textContent: "刷新",
 				onclick: () => app.refreshComboInNodes()
 			}),
-			$el("button", {id: "comfy-clipspace-button", textContent: "Clipspace", onclick: () => app.openClipspace()}),
+			$el("button", {id: "comfy-clipspace-button", textContent: "剪贴板", onclick: () => app.openClipspace()}),
 			$el("button", {
 				id: "comfy-clear-button", textContent: "清除工作流", onclick: () => {
 					if (!confirmClear.value || confirm("是否清除工作流?")) {
