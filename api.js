@@ -238,15 +238,15 @@ class ComfyApi extends EventTarget {
 			const data = await res.json();
 			return {
 				// Running action uses a different endpoint for cancelling
-				Running: data.queue_running.map((prompt) => ({
+				运行中: data.queue_running.map((prompt) => ({
 					prompt,
 					remove: { name: "Cancel", cb: () => api.interrupt() },
 				})),
-				Pending: data.queue_pending.map((prompt) => ({ prompt })),
+				等待中: data.queue_pending.map((prompt) => ({ prompt })),
 			};
 		} catch (error) {
 			console.error(error);
-			return { Running: [], Pending: [] };
+			return { 运行中: [], 等待中: [] };
 		}
 	}
 
