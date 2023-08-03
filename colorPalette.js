@@ -62,6 +62,64 @@ const colorPalettes = {
 			}
 		},
 	},
+	"zho": {
+		"id": "zho",
+		"name": "ZHO主题",
+		"colors": {
+			"node_slot": {
+				"CLIP": "#FFD500", // bright yellow
+				"CLIP_VISION": "#A8DADC", // light blue-gray
+				"CLIP_VISION_OUTPUT": "#ad7452", // rusty brown-orange
+				"CONDITIONING": "#FFA931", // vibrant orange-yellow
+				"CONTROL_NET": "#6EE7B7", // soft mint green
+				"IMAGE": "#64B5F6", // bright sky blue
+				"LATENT": "#FF9CF9", // light pink-purple
+				"MASK": "#81C784", // muted green
+				"MODEL": "#B39DDB", // light lavender-purple
+				"STYLE_MODEL": "#C2FFAE", // light green-yellow
+				"VAE": "#FF6E6E", // bright red
+				"TAESD": "#DCC274", // cheesecake
+			},
+			"litegraph_base": {
+				"BACKGROUND_IMAGE": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNrs1rEKwjAUhlETUkj3vP9rdmr1Ysammk2w5wdxuLgcMHyptfawuZX4pJSWZTnfnu/lnIe/jNNxHHGNn//HNbbv+4dr6V+11uF527arU7+u63qfa/bnmh8sWLBgwYJlqRf8MEptXPBXJXa37BSl3ixYsGDBMliwFLyCV/DeLIMFCxYsWLBMwSt4Be/NggXLYMGCBUvBK3iNruC9WbBgwYJlsGApeAWv4L1ZBgsWLFiwYJmCV/AK3psFC5bBggULloJX8BpdwXuzYMGCBctgwVLwCl7Be7MMFixYsGDBsu8FH1FaSmExVfAxBa/gvVmwYMGCZbBg/W4vAQYA5tRF9QYlv/QAAAAASUVORK5CYII=",
+				"CLEAR_BACKGROUND_COLOR": "#222",
+				"NODE_TITLE_COLOR": "#ddd", // nodes标题文字颜色
+				"NODE_SELECTED_TITLE_COLOR": "#FF96AC", // nodes高亮标题
+				"NODE_TEXT_SIZE": 14,
+				"NODE_TEXT_COLOR": "#AAA", // nodes内部文字颜色
+				"NODE_SUBTEXT_SIZE": 12,
+				"NODE_DEFAULT_COLOR": "#000000", // nodes标题栏颜色
+				"NODE_DEFAULT_BGCOLOR": "#000000", // nodes主体栏颜色
+				"NODE_DEFAULT_BOXCOLOR": "#FF96AC", // nodes选框颜色
+				"NODE_DEFAULT_SHAPE": "box",
+				"NODE_BOX_OUTLINE_COLOR": "#FF96AC", // nodes开关那个圆点颜色
+				"DEFAULT_SHADOW_COLOR": "rgba(0,0,0,0.5)",
+				"DEFAULT_GROUP_FONT": 24,
+
+				"WIDGET_BGCOLOR": "#000000", // nodes选项栏背景颜色
+				"WIDGET_OUTLINE_COLOR": "#666", // nodes选项栏框线颜色
+				"WIDGET_TEXT_COLOR": "#DDD", // nodes选项文字颜色
+				"WIDGET_SECONDARY_TEXT_COLOR": "#999", // nodes选项标题颜色
+
+				"LINK_COLOR": "#9A9",
+				"EVENT_LINK_COLOR": "#A86",
+				"CONNECTING_LINK_COLOR": "#AFA",
+			},
+			"comfy_base": {
+				"fg-color": "#fff",
+				"bg-color": "#000000", // 全局背景颜色
+				"comfy-menu-bg": "#000000", // 所有菜单背景颜色
+				"comfy-input-bg": "#000000", // 菜单按钮颜色
+				"input-text": "#ddd", // 菜单文字颜色
+				"descrip-text": "#999", // 菜单次级文字颜色
+				"drag-text": "#ccc",
+				"error-text": "#ff4444",
+				"border-color": "#4e4e4e", // 菜单表格框线颜色
+				"tr-even-bg-color": "#222", // 菜单表格内上填充颜色
+				"tr-odd-bg-color": "#353535", // 菜单表格内下填充颜色
+			}
+		},
+	},
 	"light": {
 		"id": "light",
 		"name": "浅色",
