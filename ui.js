@@ -116,7 +116,7 @@ function dragElement(dragEl, settings) {
 	let savePos = undefined;
 	settings.addSetting({
 		id: "Comfy.MenuPosition",
-		name: "Save menu position",
+		name: "保存菜单位置",
 		type: "boolean",
 		defaultValue: savePos,
 		onChange(value) {
@@ -512,14 +512,14 @@ export class ComfyUI {
 
 		const confirmClear = this.settings.addSetting({
 			id: "Comfy.ConfirmClear",
-			name: "Require confirmation when clearing workflow",
+			name: "清除工作流时是否需要确认",
 			type: "boolean",
 			defaultValue: true,
 		});
 
 		const promptFilename = this.settings.addSetting({
 			id: "Comfy.PromptFilename",
-			name: "Prompt for filename when saving workflow",
+			name: "保存工作流时提示输入文件名",
 			type: "boolean",
 			defaultValue: true,
 		});
@@ -537,14 +537,14 @@ export class ComfyUI {
 		 */
 		const previewImage = this.settings.addSetting({
 			id: "Comfy.PreviewFormat",
-			name: "When displaying a preview in the image widget, convert it to a lightweight image, e.g. webp, jpeg, webp;50, etc.",
+			name: "在模块中显示预览时，将其转换为轻量级图像, e.g. webp, jpeg, webp;50, etc.",
 			type: "text",
 			defaultValue: "",
 		});
 
 		this.settings.addSetting({
 			id: "Comfy.DisableSliders",
-			name: "Disable sliders.",
+			name: "禁用滑块.",
 			type: "boolean",
 			defaultValue: false,
 		});
@@ -640,7 +640,7 @@ export class ComfyUI {
 				$el("button", {
 					$: (b) => (this.history.button = b),
 					id: "comfy-view-history-button",
-					textContent: "查看生成历史",
+					textContent: "查看历史",
 					onclick: () => {
 						this.queue.hide();
 						this.history.toggle();
@@ -734,7 +734,7 @@ export class ComfyUI {
 
 		const devMode = this.settings.addSetting({
 			id: "Comfy.DevMode",
-			name: "Enable Dev mode Options",
+			name: "是否开启开发人员模式",
 			type: "boolean",
 			defaultValue: false,
 			onChange: function(value) { document.getElementById("comfy-dev-save-api-button").style.display = value ? "block" : "none"},
