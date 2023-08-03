@@ -240,7 +240,7 @@ class ComfyApi extends EventTarget {
 				// Running action uses a different endpoint for cancelling
 				运行中: data.queue_running.map((prompt) => ({
 					prompt,
-					remove: { name: "Cancel", cb: () => api.interrupt() },
+					remove: { name: "取消", cb: () => api.interrupt() },
 				})),
 				等待中: data.queue_pending.map((prompt) => ({ prompt })),
 			};
