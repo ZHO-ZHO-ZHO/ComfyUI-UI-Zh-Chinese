@@ -6,7 +6,7 @@ import {$el} from "../../scripts/ui.js";
 const colorPalettes = {
 	"dark": {
 		"id": "dark",
-		"name": "Dark (Default)",
+		"name": "深色 (默认)",
 		"colors": {
 			"node_slot": {
 				"CLIP": "#FFD500", // bright yellow
@@ -64,7 +64,7 @@ const colorPalettes = {
 	},
 	"light": {
 		"id": "light",
-		"name": "Light",
+		"name": "浅色",
 		"colors": {
 			"node_slot": {
 				"CLIP": "#FFA726", // orange
@@ -121,7 +121,7 @@ const colorPalettes = {
 	},
 	"solarized": {
 		"id": "solarized",
-		"name": "Solarized",
+		"name": "Solarized调色板",
 		"colors": {
 			"node_slot": {
 				"CLIP": "#2AB7CA", // light blue
@@ -435,7 +435,7 @@ app.registerExtension({
 					$el("td", [
 						$el("label", {
 							for: id.replaceAll(".", "-"),
-							textContent: "Color palette",
+							textContent: "UI主题",
 						}),
 					]),
 					$el("td", [
@@ -449,7 +449,7 @@ app.registerExtension({
 						}, [
 							$el("input", {
 								type: "button",
-								value: "Export",
+								value: "导出",
 								onclick: async () => {
 									const colorPaletteId = app.ui.settings.getSettingValue(id, defaultColorPaletteId);
 									const colorPalette = await completeColorPalette(getColorPalette(colorPaletteId));
@@ -471,14 +471,14 @@ app.registerExtension({
 							}),
 							$el("input", {
 								type: "button",
-								value: "Import",
+								value: "导入",
 								onclick: () => {
 									fileInput.click();
 								}
 							}),
 							$el("input", {
 								type: "button",
-								value: "Template",
+								value: "默认",
 								onclick: async () => {
 									const colorPalette = await getColorPaletteTemplate();
 									const json = JSON.stringify(colorPalette, null, 2); // convert the data to a JSON string
@@ -499,7 +499,7 @@ app.registerExtension({
 							}),
 							$el("input", {
 								type: "button",
-								value: "Delete",
+								value: "删除",
 								onclick: async () => {
 									let colorPaletteId = app.ui.settings.getSettingValue(id, defaultColorPaletteId);
 
